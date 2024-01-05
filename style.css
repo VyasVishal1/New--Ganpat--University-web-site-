@@ -94,7 +94,7 @@
     font-size: 3vh;
     margin: 5vh;
     text-transform: uppercase;
-    
+    font-family: 'Oswald', sans-serif;s-serif;
 }
 
 @keyframes nav {
@@ -262,7 +262,7 @@ font-family: 'Roboto Slab', serif;
         color: white;
         font-size: 4vw;
         
-        
+        font-family: 'Oswald', sans-serif;s-serif;        
     }
     
     #Event{
