@@ -94,7 +94,24 @@
     font-size: 3vh;
     margin: 5vh;
     text-transform: uppercase;
+    transition: all .4s;
     font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+.JSNav a:hover{
+    color: red;
+    letter-spacing: 10px;
+}
+
+
+.JSNav a::after{
+    content: "";
+    position: relative;
+    width: 100vw;
+    height: 1vh;
+    background: white;
 }
 
 @keyframes nav {
@@ -185,9 +202,29 @@ font-family: 'Roboto Slab', serif;
         font-size: 7vw;
         text-transform: uppercase;
         transition: all 1s;
-        font-family: 'Oswald', sans-serif;s-serif;
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 2px;
          
+    }
+    
+    .welcome .one{
+        display: ;
+    }
+    
+    .welcome .two{
+        display: none;
+    }
+    
+    .welcome  .three{
+        display: none;
+    }
+    
+    .welcome .four{
+        display: none;
+    }
+    
+    .welcome .five{
+        display: none;
     }
     
     .welcome:hover{
@@ -195,6 +232,8 @@ font-family: 'Roboto Slab', serif;
         letter-spacing: 10px;
         font-size: 7.5vw;
     }
+    
+    
     
     
     .rowUp{
@@ -261,8 +300,8 @@ font-family: 'Roboto Slab', serif;
         text-align: center;
         color: white;
         font-size: 4vw;
+        font-family: 'Oswald', sans-serif;s-serif;
         
-        font-family: 'Oswald', sans-serif;s-serif;        
     }
     
     #Event{
