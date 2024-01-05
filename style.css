@@ -38,26 +38,40 @@
     
 }
 
-.JSNav{
+#JSNav{
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
     width: 100vw;
-    height: 0vh;
+    height: 80vh;
     background: #0000007b;
     backdrop-filter: blur( 8px);
     z-index: 90;
     overflow: hidden;
-    
+    animation: show 2s forwards;
    
 }
 
 .hide{
- 
-    animation: Hidenav 1s 1 forwards;
+    animation: Hidenav 2s;
 }
+
+
+@keyframes show {
+    from{
+        height: 0vh;
+    }
+    
+    to{
+        height: 80vh;
+        
+    }
+}
+
+
+
 
 @keyframes Hidenav {
     from{
