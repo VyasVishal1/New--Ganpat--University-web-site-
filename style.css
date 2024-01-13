@@ -14,6 +14,7 @@
         position: absolute;
         background: red;
         z-index: 99;
+        transition: all .3s;
     }
 
 ::-webkit-scrollbar{
@@ -1328,7 +1329,9 @@ nav{
         position: absolute;
         background: red;
         z-index: 99;
-    }
+
+transition: all .3s;    
+}
     
     
     
