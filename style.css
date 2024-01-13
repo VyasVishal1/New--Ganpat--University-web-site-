@@ -7,22 +7,182 @@
     user-select: none;
 }
 
-@media(max-width: 1500px){
+  .cursor{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        background: red;
+        z-index: 99;
+    }
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+
 
 .main{
     width: 100vw;
+    height: auto;
+    
+    
+}
+
+   
+    .zero{
+        width: 100vw;
+        height: 110vh;
+        background: red;
+        box-shadow: inset 0px 0px 1000px #000000bd;
+        background-repeat: no-repeat;
+        background-size: auto 100vh;
+        position: fixed;
+        overflow: hidden;
+        z-index: 69;
+        animation: ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: zeroImg 5s;
+        
+    }
+    
+    .zero h1{
+        color: white;
+        font-size: 5vh;
+        top: 50vh;
+        text-align: center;
+        padding: 2vh;
+    }
+    
+    .zeroC{
+        
+    }
+    
+    @keyframes zeroImg {
+        0%{
+            
+        }
+        
+        100%{
+            right: 0;
+        }
+    }
+    
+    @keyframes zero {
+        0%{
+            
+        }
+        
+        100%{
+            height: 0vh;
+        }
+    }
+    
+    
+    /* .zero::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: #000000c0;
+    } */
+    
+
+
+
+
+
+.OneMain{
+    width: 100vw;
+    height: 200vh;
 }
 
 .home{
     width: 100vw;
-    min-height: 30vh;
-    
-    
+    height: 100vh;
+    z-index: 15;
     background: url('guni.jpeg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100vw 100vh;
+    transform: scale(1);
     overflow: hidden;
     box-shadow: inset 0px 0px 50px #020202ac;
+    position: relative;
+}
+
+.Vr{
+    position: fixed;
+    right: 0%;
+    top: 20vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 5vw;
+    border: 1px solid black;
+    color: white;
+    z-index: 5;
+    
+}
+
+
+.AniBox{
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+    top: 40vh;
+    left: 0vw;
+    z-index: 1;
+    filter: blur(80px);
+    animation: AniBox 5s infinite linear,AniX 20s infinite linear alternate;
+   
+    background: red;
+}
+
+@keyframes AniX {
+    0%{
+        
+    }
+    
+    30%{
+        left: 70vw;
+        top: 60vh;
+    }
+    60%{
+        left: 90vw;
+        top: 40vh;
+    }
+    100%{
+        left: 20vw;
+        top: 60vh;
+    }
+}
+
+
+@keyframes AniBox {
+    0%{
+        
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.Vr span{
+    transform: rotate(270deg);
+    padding: 0;
+    
 }
 
 
@@ -43,7 +203,1278 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
+    width: 100vw;
+    height: 80vh;
+    background: #0000007b;
+    backdrop-filter: blur( 8px);
+    z-index: 90;
+    overflow: hidden;
+    animation: show 2s forwards;
+   
+}
+
+.hide{
+    animation: Hidenav 2s;
+}
+
+
+@keyframes show {
+    from{
+        height: 0vh;
+    }
+    
+    to{
+        height: 80vh;
+        
+    }
+}
+
+
+
+
+@keyframes Hidenav {
+    from{
+        height: 75vh;
+    }
+    
+    to{
+        height: 0vh;
+        display: none;
+    }
+}
+
+
+
+
+
+.JSNav a{
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+    margin: 5vh;
+    text-transform: uppercase;
+    transition: all .4s;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+.JSNav a:hover{
+    color: red;
+    letter-spacing: 10px;
+}
+
+
+.JSNav a::after{
+    content: "";
+    position: relative;
+    width: 100vw;
+    height: 1vh;
+    background: white;
+}
+
+@keyframes nav {
+    from{
+        height: 0vh;
+    }
+    
+    to{
+        height: 75vh;
+    }
+}
+
+
+
+
+
+
+
+#logo{
+    padding: 2vh 4vw;
+    width: 30vw;
+    height: auto;
+}
+
+nav{
+    color: red;
+    padding: 2vh 6vw;
+}
+
+.header nav a{
+    
+    color: red;
+    
+}
+
+.homeBox{
+    width: 40%;
+    height: 60%;
+    background: #000000a5;
+    margin: 6% 6% 3% 50%;
+    padding: 3vw;
+    border-radius: 2vw;
+    z-index: 5;  
+}
+
+.homeBox h1{
+    font-size: 3vw;
+    color: red;
+    
+    margin-bottom: 1.2vh;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.homeBox p{
+    font-size: 1.5vw;
+    color: white;
+}
+
+.homeBox button{
+    font-size: 2vw;
+    margin-top: 10%;
+    margin-left: 70%;
+    padding: .3vh 2vw;
+    background: red;
+    color: white;
+}
+
+
+
+.second{
+    width: 100vw;
+    height: 66.66%;
+    color: white;
+    background: black;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+    
+    .secondTwo{
+        
+        display: flex;
+        padding: 5vw 8vw;
+        flex-direction: column;
+        font-family: 'Crimson Pro', serif;
+
+
+
+    }
+    
+    .secondTwo .one{
+        font-size: 2vw;
+        text-align: center;
+        margin-bottom: 2vh;
+        z-index: 4;
+    }
+    
+     .secondTwo .two{
+        font-size: 2vw;
+        color: #787878cf;
+        text-align: center;
+        padding: 5vw 2vw;
+        z-index: 4;
+    }
+    
+    .second .welcome{
+        
+        width: 100vw;
+        height: 16vw;
+        z-index: 10;
+        margin-top: 0vh;
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        font-size: 5vw;
+        text-transform: uppercase;
+        transition: all 1s;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 2px;
+         overflow:hidden ;
+         
+    }
+    
+    .welcome .one{
+        animation:  ;
+        position: relative;
+        text-align: center;
+        margin-bottom:5vw; 
+    }
+    
+    .welcome .Two{
+        animation: ;
+        position: relative;
+        text-align: center;
+        position: relative;
+        font-size: 7vw;
+    }
+    
+    @keyframes Wone {
+        0%{
+            top: 0;
+        }
+        
+        50%{
+            opacity: 0;
+        }
+        
+        100%{
+            top: -100%;
+        }
+    }
+    
+     @keyframes rWone {
+        0%{
+            
+            top: -100%;
+        }
+        
+        50%{
+            opacity: 0;
+        }
+        
+        100%{
+            top: 0;
+        }
+    }
+    
+    @keyframes Wtwo {
+         0%{
+            top: 0;
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            top: -100%;
+        }
+    }
+    
+    @keyframes rWtwo {
+         0%{
+            top: -100%;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            
+            top: 0;
+            opacity: 0;
+        }
+    }
+    
+   
+ 
+    
+    
+    
+    @keyframes Welcome {
+        0%{
+             
+        }
+        
+        25%{
+            
+        }
+        
+        50%{
+            
+        }
+        
+        75%{
+            
+        }
+        
+        100%{
+            
+        }
+    }
+    
+    
+    .welcome:hover{
+        color: white;
+        letter-spacing: 10px;
+        font-size: 5vw;
+    }
+    
+    
+   
+
+    
+    
+    
+    
+   
+
+
+
+    .TwoMain{
+        width: 100vw;
+        height: 230vh;
+        background: black;
+        color: white;
+
+        position: relative;
+    }
+
+    .TwoMain h1{
+        display: flex;
+        color: white;
+        justify-content: center;
+        padding: 5vh 0vh 5vh 0vh;
+        border-bottom: 1px solid black;
+        z-index: 4;
+    }
+
+
+    .Mainswiper{
+        width: 100vw;
+        height: 90vh;
+        z-index: 4;
+    }
+
+
+
+       .swiper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .swiper h1{
+        color: black;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-v {
+      background: #eee;
+    }
+
+    .Gellary{
+        width: 100vw;
+        height: 60vh;
+        color: white;
+
+        margin-top: 5vh;
+
+    }
+
+    .Gellary h1{
+        padding: 2vh 0vh;
+    }
+
+    .Gellary .Photo{
+        width: 100vw;
+        height: 90vh;
+        margin-top: 3vh;
+
+    }
+
+      .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+
+    
+    
+    
+    
+     .MainThree{
+        
+        width: 100vw;
+        height: 250vh;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        top:0;
+        
+    }
+    
+    .Admission{
+        width: 50vw;
+        height: 80vh;
+        box-shadow: 0px 0px 10px black;
+        margin: 3vw;
+        border-radius: 2%;
+        margin-top: 0vh;
+        z-index: 6;
+        position: fixed;
+        top: -50vh;
+        display: none;
+        background: #ffffffa6;
+        backdrop-filter: blur(20px);
+        
+        animation: ;    
+        
+    }
+    
+    @keyframes AddmissionShow {
+    0%{
+       opacity: 0;
+       display: none;
+    }
+    
+    20%{
+        opacity: 0;
+    }
+    
+    100%{
+        top: 10vh;
+        opacity: 1;
+    }
+        
+    }
+    
+    @keyframes AddmissionHide {
+    0%{
+       
+    }
+    
+    20%{
+        
+    }
+    
+    100%{
+        top: -50vh;
+        display: none;
+    }
+        
+    }
+    
+    
+    
+    .Admission h1{
+        width: 100%;
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5vh 0vh;
+    }
+    
+    .Form{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .form-group{
+        margin: 5vh 0vh 3vh 2vh;
+        
+        display: flex;
+        
+        align-items: center;
+    }
+    
+    input{
+        width: 90%;
+        height: 4vh;
+        position: relative;
+        left: 3vw;
+        font-size: 2vh;
+        box-shadow: 0px 0px 20px #000000be;
+    }
+    
+    select{
+        box-shadow: 0px 0px 20px #000000be;
+    }
+    
+    input::placeholder{
+        padding-left: 1.5vw;
+        color: black;
+    }
+    
+    #countrySelector{
+        margin: 0%;
+        width: 10%;
+        font-size: 2vh;
+        height: 4vh;
+        left: 3vw;
+        margin: 0vh 0vh 0vh 3vw;
+        z-index: 2;
+        box-shadow: 0px 0px 0px ;
+    }
+    
+    #stateSelector{
+        width: 42.5%;
+        height: 4vh;
+        font-size: 1.5vh;
+        margin: 0vh 0vh 0vh 3vw;
+    }
+    
+    #contactNumber{
+        position: relative;
+        left: 0%;
+        width: 80%;
+       
+    }
+    
+    #courseSelector{
+        width: 90%;
+        height: 4vh;
+        font-size: 1.5vh;
+        margin: 0vh 0vh 0vh 3vw;
+    }
+    
+    .Select{
+        display: flex;
+    }
+    
+    #gujaratCitySelector{
+        width: 42.5%;
+        height: 4vh;
+        font-size: 1.5vh;
+        margin: 0vh 0vh 0vh 5%;
+    }
+    
+    #check{
+        width: 4vw;
+        box-shadow: 0px 0px 0px ;
+    }
+    
+    .Last label{
+        font-size: 1.8vw;
+        padding-left: 3vw;
+        color: #000000d3;
+    }
+    
+    .Last{
+        margin: 5vh 0vh 3vh 2vh;
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
+    }
+    
+    
+    
+    .form-group label{
+        
+    }
+    
+    button{
+        padding: 1vh 2vh 1vh 2vh;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        width: 20%;
+        font-size: 1.5vh;
+        margin: 0vh 2vw 0vh 2vw;
+    }
+    
+    button::before{
+        position: absolute;
+        content: 'Click';
+        display: flex;
+        padding-left: 35%;
+        
+        top: 0%;
+        left: -200%;
+        width: 15vh;
+        height: 5vh;
+        background: red;
+        color: white;
+        border-radius: 30%;
+        transition: all .2s;
+        
+    }
+    
+    button:hover::before{
+        left: 0%;
+        padding-top: 10%;
+        border-radius: 0%;
+    }
+    
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+        
+    }
+    
+    .button div{
+        
+        padding: 1vh 2vh 1vh 2vh;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        
+        font-size: 1.5vh;
+        margin: 0vh 2vw 0vh 2vw;
+        border: 1px solid black;
+    }
+    
+    
+    
+    
+    .Add{
+        width: 80%;
+        margin: auto;
+        height: 35%;
+        z-index: 4;
+        border-radius: 20px;
+        overflow: hidden;
+        background: red;
+        border: 1px solid black;
+        
+        
+    }
+    
+    .Add a{
+        text-decoration: none;
+        color: white;
+        padding-right: 2vw;
+    }
+    .Add .img{
+        height:80%;
+        border: 1px solid white;
+    }
+    .Add img{
+        width: 100%;
+        box-shadow: 0px 0px 100px #000000be;
+        transition: all .4s;
+        height:100%;
+    }
+    
+    .Add img:hover{
+        transform: scale(1.2);
+    }
+    
+    .Add div{
+        display: flex;
+        padding: 4vh 5vw;
+        font-size: 1.8vw;
+        color: white;
+    }
+    
+    .bi bi-arrow-right{
+        padding: 2vh 5vw;
+    }
+    
+    .AddLine{
+        width: 90vw;
+        
+        border: 1px solid white;
+        
+    }
+    
+    .AddTwo{
+        width: 80%;
+        margin: auto;
+        height: 35%;
+        z-index: 4;
+        border-radius: 20px;
+        overflow: hidden;
+        background: red;
+        border: 1px solid black;
+       
+    }
+    
+    .AddTwo img{
+        width: 100%;
+        
+        transition: all .4s;
+    }
+    
+    .Add .img{
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        box-shadow: 0px 0px 100px #000000be;
+    }
+    .AddTwo .img{
+        padding: 0;
+        overflow: hidden;
+        box-shadow: 0px 0px 100px #000000be;
+        height:80%;
+        border: 1px solid white;
+    }
+    
+    .AddTwo img:hover{
+        transform: scale(1.2);
+    }
+    
+    .AddTwo a{
+        text-decoration: none;
+        color: white;
+        padding-right: 2vw;
+    }
+    
+    .AddTwo div{
+        display: flex;
+        padding: 4vh 5vw;
+        font-size: 1.8vw;
+        color: white;
+
+    }
+    
+    
+    
+    
+    .MainFour{
+        width: 100vw;
+        height: 100vh;
+        background: black;
+        
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .FourContent{
+        width: 90vw;
+        height: 90vh;
+        z-index: 4;
+    }
+    
+    .FourContent h1{
+        color: white;
+        padding: 5%;
+        z-index: 4;
+        border-bottom: 1px solid red;
+        font-size:3vw;
+    }
+    
+    .FourContent p{
+        color: white;
+        padding: 5%;
+        font-size: 1.5vw;
+        opacity: .8;
+        z-index: 4;
+        text-align: justify;
+        transition: all 1s;
+    }
+    
+    
+    .RedBox{
+        width: 0vw;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        background: red;
+        position: relative;
+        right: 0;
+        top: 50vh;
+        z-index: 4;
+        animation: Year 2s forwards;
+    }
+    .FourContent p:hover ~ .RedBox{
+        width:0;
+    }
+    .RedBox .y h1{
+        font-size: 1000%;
+        color: white;
+        margin-top: 15%;
+    }
+    
+    .RedBox .year{
+        font-size: 2vw;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15%;
+    }
+    
+    @keyframes Year {
+        0%{
+            
+        }
+        
+        100%{
+            width: 40vw;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+            box-shadow: inset 0px 0px 100px #000000b1;
+        }
+    }
+    
+    
+    .MainFive{
+        width: 100vw;
+        height: 400vh;
+        z-index: 4;
+        
+        position: ;
+        z-index: 4;
+        background-color: black;
+        color: white;
+    }
+    
+    .MainFive h1{
+        padding: 5%;
+        padding-right: 7%;
+        display: inline-block;
+        font-size: 6vw;
+        z-index: 5;
+        border-bottom: 4px solid red;
+    }
+    
+    .FiveContent{
+        width: 100vw;
+        height: 90vh;
+        
+        z-index: 5;
+        background-color: transparent;
+    }
+    
+    .FiveContent .Up,.down{
+        width: 100%;
+        height: 180vh;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+      
+    }
+    
+    .FiveBox{
+        width: 90%;
+        height: 100%;
+        overflow: ;
+         /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      
+        
+        position: relative;
+    }
+    
+    .MainBox{
+        width: 100%;
+        height: 80%;
+        background: #616161;
+        position: relative;
+        overflow-x: ;
+        box-shadow: inset 0px 0px 100px #000000ad;
+        border: 2px solid white;
+        z-index: 4;
+        display: flex;
+    }
+    
+    /* .MainBox::after{
+        content: '';
+        height: 30vw;
+        width: 30vw;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom-left-radius: 30%;
+        background: red;
+        filter: blur(100px);
+        z-index: 1;
+    } */
+    
+    
+    
+    .FiveBox img{
+        height: auto;
+        width:50%;
+        
+        box-shadow: inset 0px 0px 100px #000000ad;
+    }
+    
+     
+     .ImgText{
+         width: 50%;
+         /* border-bottom: 2px solid white;
+         border-left: 2px solid white;
+         border-right: 2px solid white; */
+         height: 100%;
+         color:white;
+         
+         
+     }
+     
+     .ImgText h2{
+         font-size: 200%;
+         padding: 6%;
+         border-bottom: 5px solid red;
+     }
+     
+     .ImgText p{
+         padding: 6%;
+         text-align: justify;
+     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    border-top: 1px solid white;
+    width: 100%;
+    background: black;
+    font-family: 'Play', sans-serif;
+}
+
+.rowOne {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    padding: 1vh 0vw 1vh 0vw;
+}
+
+.footer i{
+    margin: 6% 1%;
+    padding: 1vh 2vw;
+    color: gray;
+    text-decoration: none;
+    font-size: 2vh;
+    transition: 1s;
+}
+
+.footer i::after {
+    content: '';
+    display: block;
+    width: 0;
+    position: relative;
+    left: -25%;
+    margin-top: 1vh;
+    height: 2px;
+    background: white;
+    transition: width 0.5s;
+}
+
+.footer i:hover::after {
+    width: 150%;
+}
+
+.footer i:hover {
+    color: white;
+}
+
+.rowTwo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rowTwo a {
+    transition: 1s;
+    margin-bottom: 2%;
+    color: gray;
+    text-decoration: none;
+    position: relative;
+    left: 10%;
+    font-size: 1vh;
+}
+
+.rowTwo a:hover {
+    color: white;
+}
+
+.rowThree {
+    text-align: center;
+    display: block;
+    font-size: 1%;
+    color: gray;
+}
+
+@media(max-width: 1200px){
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    
+}
+
+.main{
+    width: 100vw;
+    height: auto;
+    
+    
+}
+
+   
+    .zero{
+        width: 100vw;
+        height: 110vh;
+        background: red;
+        box-shadow: inset 0px 0px 1000px #000000bd;
+        background-repeat: no-repeat;
+        background-size: auto 100vh;
+        position: fixed;
+        overflow: hidden;
+        z-index: 69;
+        animation: ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: zeroImg 5s;
+        
+    }
+    
+    .zero h1{
+        color: white;
+        font-size: 5vh;
+        top: 50vh;
+        text-align: center;
+        padding: 2vh;
+    }
+    
+    .zeroC{
+        
+    }
+    
+    .cursor{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        background: red;
+        z-index: 99;
+    }
+    
+    
+    
+    @keyframes zeroImg {
+        0%{
+            
+        }
+        
+        100%{
+            right: 0;
+        }
+    }
+    
+    @keyframes zero {
+        0%{
+            
+        }
+        
+        100%{
+            height: 0vh;
+        }
+    }
+    
+    
+    /* .zero::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: #000000c0;
+    } */
+    
+
+
+
+
+
+.OneMain{
+    width: 100vw;
+    height: 100vh;
+}
+
+.home{
+    width: 100vw;
+    height: 33.33%;
+    z-index: 3;
+    background: url('guni.jpeg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transform: scale(1);
+    overflow: hidden;
+    box-shadow: inset 0px 0px 50px #020202ac;
+}
+
+.Vr{
+    position: fixed;
+    right: 0%;
+    top: 60vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 5vw;
+    border: 1px solid black;
+    color: white;
+    z-index: 5;
+    
+}
+
+
+.AniBox{
+    width: 30vw;
+    height: 30vw;
+    position: fixed;
+    top: 40vh;
+    left: 0vw;
+    z-index: 1;
+    filter: blur(80px);
+    animation: AniBox 5s infinite linear,AniX 20s infinite linear alternate;
+   
+    background: red;
+}
+
+@keyframes AniX {
+    0%{
+        
+    }
+    
+    30%{
+        left: 70vw;
+        top: 60vh;
+    }
+    60%{
+        left: 90vw;
+        top: 40vh;
+    }
+    100%{
+        left: 20vw;
+        top: 60vh;
+    }
+}
+
+
+@keyframes AniBox {
+    0%{
+        
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.Vr span{
+    transform: rotate(270deg);
+    padding: 0;
+    
+}
+
+
+
+
+.header{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000a5;
+    
+}
+
+#JSNav{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     width: 100vw;
     height: 80vh;
     background: #0000007b;
@@ -158,12 +1589,13 @@ nav{
 }
 
 .homeBox h1{
-    font-size: 4vw;
+    font-size: 3vw;
     color: red;
-    margin-bottom: 1.5vh;
-    font-family: 'Kalnia', serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto Slab', serif;
+    
+    margin-bottom: 1.2vh;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .homeBox p{
@@ -184,19 +1616,57 @@ font-family: 'Roboto Slab', serif;
 
 .second{
     width: 100vw;
-    height: 100vh;
+    height: 66.66%;
     color: white;
     background: black;
-    };
+    
+    
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
-.welcome{
-        position: relative;
-        top: 10vh;
+
+
+    
+    .secondTwo{
         
-        border: 1px solid black;
         display: flex;
-        justify-content: center;
+        padding: 5vw 8vw;
+        flex-direction: column;
+        font-family: 'Crimson Pro', serif;
+
+
+
+    }
+    
+    .secondTwo .one{
+        font-size: 4vw;
+        text-align: center;
+        margin-bottom: 2vh;
+        position: relative;
+        top: -18vh;
+        z-index: 4;
+        border: 1px solid white;
+    }
+    
+     .secondTwo .two{
+        font-size: 4vw;
+        color: #787878cf;
+        text-align: center;
+        padding: 5vw 2vw;
+        z-index: 4;
+        position: absolute;
+    }
+    
+    .second .welcome{
+        
+        width: 100vw;
+        height: 10vh;
+        z-index: 4;
+        margin-top: 0vh;
+        position: relative;
+        top: -4vh;
         color: transparent;
         -webkit-text-stroke: 1px white;
         font-size: 7vw;
@@ -204,28 +1674,107 @@ font-family: 'Roboto Slab', serif;
         transition: all 1s;
         font-family: 'Oswald', sans-serif;
         letter-spacing: 2px;
-         
+         overflow: hidden;
+         border: 1px solid red;
     }
     
     .welcome .one{
-        display: ;
+        animation:  ;
+        position: relative;
+        text-align: center;
     }
     
-    .welcome .two{
-        display: none;
+    .welcome .Two{
+        animation: ;
+        position: relative;
+        text-align: center;
+        position: relative;
+        font-size: 10vw;
     }
     
-    .welcome  .three{
-        display: none;
+    @keyframes Wone {
+        0%{
+            top: 0;
+        }
+        
+        50%{
+            opacity: 0;
+        }
+        
+        100%{
+            top: -100%;
+        }
     }
     
-    .welcome .four{
-        display: none;
+     @keyframes rWone {
+        0%{
+            
+            top: -100%;
+        }
+        
+        50%{
+            opacity: 0;
+        }
+        
+        100%{
+            top: 0;
+        }
     }
     
-    .welcome .five{
-        display: none;
+    @keyframes Wtwo {
+         0%{
+            top: 0;
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            top: -100%;
+        }
     }
+    
+    @keyframes rWtwo {
+         0%{
+            top: -100%;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            
+            top: 0;
+            opacity: 0;
+        }
+    }
+    
+   
+ 
+    
+    
+    
+    @keyframes Welcome {
+        0%{
+             
+        }
+        
+        25%{
+            
+        }
+        
+        50%{
+            
+        }
+        
+        75%{
+            
+        }
+        
+        100%{
+            
+        }
+    }
+    
     
     .welcome:hover{
         color: white;
@@ -234,158 +1783,650 @@ font-family: 'Roboto Slab', serif;
     }
     
     
+   
+
     
     
-    .rowUp{
-        position: relative;
-        top: 20%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        overflow-x: hidden;
-        height: 70%;
-        border-bottom:  #a4a4a4;
-        background-image: linear-gradient(
-            to left, 
-            black 50%, 
-            #3e3e3e 50% );
-    }
     
-    .rowUp .box{
-        width: 30%;
-        height: 35%;
-        border: 1px solid black;
-        background: red;
+    
+   
+
+
+
+    .TwoMain{
+        width: 100vw;
+        height: 100vh;
+        background: black;
         color: white;
+
+        position: relative;
+    }
+
+    .TwoMain h1{
+        display: flex;
+        color: white;
+        justify-content: center;
+        padding: 5vh 0vh 5vh 0vh;
+        border-bottom: 1px solid black;
+        z-index: 4;
+    }
+
+
+    .Mainswiper{
+        width: 100vw;
+        height: 50vh;
+        z-index: 4;
+    }
+
+
+
+       .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper h1{
+        color: black;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-v {
+      background: #eee;
+    }
+
+    .Gellary{
+        width: 100vw;
+        height: 30vh;
+        color: white;
+
+        margin-top: 5vh;
+
+    }
+
+    .Gellary h1{
+        padding: 2vh 0vh;
+    }
+
+    .Gellary .Photo{
+        width: 100vw;
+        height: 20vh;
+        margin-top: 3vh;
+
+    }
+
+      .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+
+    
+    
+    
+    
+     .MainThree{
+        width: 100vw;
+        height: 100vh;
+        background: black;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: inset 0px 0px 20px black;
-       
+        position: relative;
+    }
+    
+    .Admission{
+        width: 94vw;
+        height: 80vh;
         box-shadow: 0px 0px 10px black;
-
-        transition: all .5s ease-in;
-    }
-    
-    
-    .rowUp .one:hover{
-        width: 40%;
-        height: 45%;
-        margin-left: 10%;
-        rotate: 15deg;
-    }
-    
-    .rowUp .two:hover{
-        width: 45%;
-        height: 50%;
-        z-index: 2;
-    }
-    
-    .rowUp .three img{
-        box-shadow: inset 0px 0x 100px black;
-    }
-    
-    .rowUp .three:hover{
-        width: 40%;
-        height: 45%;
-        margin-right: 10%;
-        rotate: -15deg;
-    }
-    
-    .rowUp .box .title{
-        text-align: center;
-        color: white;
-        font-size: 4vw;
-        font-family: 'Oswald', sans-serif;s-serif;
+        margin: 3vw;
+        border-radius: 2%;
+        margin-top: 0vh;
+        z-index: 6;
+        position: fixed;
+        top: -50vh;
+        display: none;
+        background: #ffffffa6;
+        backdrop-filter: blur(20px);
+        
+        animation: ;    
         
     }
     
-    #Event{
-        width: 10vw;
+    @keyframes AddmissionShow {
+    0%{
+       opacity: 0;
+       display: none;
+    }
+    
+    20%{
+        opacity: 0;
+    }
+    
+    100%{
+        top: 10vh;
+        opacity: 1;
+    }
         
     }
-    .rowUp p{
-        font-size: 1.5vw;
-        margin: 0px 1vw;
+    
+    @keyframes AddmissionHide {
+    0%{
+       
+    }
+    
+    20%{
+        
+    }
+    
+    100%{
+        top: -50vh;
+        display: none;
+    }
+        
+    }
+    
+    
+    
+    .Admission h1{
+        width: 100%;
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5vh 0vh;
+    }
+    
+    .Form{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .form-group{
+        margin: 5vh 0vh 3vh 2vh;
+        
+        display: flex;
+        
+        align-items: center;
+    }
+    
+    input{
+        width: 90%;
+        height: 4vh;
+        position: relative;
+        left: 3vw;
+        font-size: 2vh;
+        box-shadow: 0px 0px 20px #000000be;
+    }
+    
+    select{
+        box-shadow: 0px 0px 20px #000000be;
+    }
+    
+    input::placeholder{
+        padding-left: 1.5vw;
         color: black;
     }
     
-    .rowUp .box a{
-        text-decoration: none;
-        color: white;
-        padding: 3% 7%;
-        border: 1px solid black;
-        font-size: 2vw;
+    #countrySelector{
+        margin: 0%;
+        width: 10%;
+        font-size: 2vh;
+        height: 4vh;
+        left: 3vw;
+        margin: 0vh 0vh 0vh 3vw;
+        z-index: 2;
+        box-shadow: 0px 0px 0px ;
+    }
+    
+    #stateSelector{
+        width: 42.5%;
+        height: 4vh;
+        font-size: 1.5vh;
+        margin: 0vh 0vh 0vh 3vw;
+    }
+    
+    #contactNumber{
+        position: relative;
+        left: 0%;
+        width: 80%;
+       
+    }
+    
+    #courseSelector{
+        width: 90%;
+        height: 4vh;
+        font-size: 1.5vh;
+        margin: 0vh 0vh 0vh 3vw;
+    }
+    
+    .Select{
+        display: flex;
+    }
+    
+    #gujaratCitySelector{
+        width: 42.5%;
+        height: 4vh;
+        font-size: 1.5vh;
+        margin: 0vh 0vh 0vh 5%;
+    }
+    
+    #check{
+        width: 4vw;
+        box-shadow: 0px 0px 0px ;
+    }
+    
+    .Last label{
+        font-size: 3.7vw;
+        padding-left: 5vw;
+        color: #000000d3;
+    }
+    
+    .Last{
+        margin: 5vh 0vh 3vh 2vh;
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
     }
     
     
     
-      .Three{
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    color: white;
-    border: 1px solid white;
-    margin-top: .3vh;
-}
-    
-    
-    
-    .rowBottom{
-        display: flex;
-        position: relative;
-        top: 20vh;
-        width: 100%;
-        height: 20%;
+    .form-group label{
         
-        }
+    }
     
-    .left{
+    button{
+        padding: 1vh 2vh 1vh 2vh;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        width: 20%;
+        font-size: 1.5vh;
+        margin: 0vh 2vw 0vh 2vw;
+    }
+    
+    button::before{
+        position: absolute;
+        content: 'Click';
+        display: flex;
+        padding-left: 35%;
+        
+        top: 0%;
+        left: -200%;
+        width: 10vh;
+        height: 5vh;
+        background: red;
+        color: white;
+        border-radius: 30%;
+        transition: all .2s;
+        
+    }
+    
+    button:hover::before{
+        left: 0%;
+        padding-top: 10%;
+        border-radius: 0%;
+    }
+    
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+        
+    }
+    
+    .button div{
+        
+        padding: 1vh 2vh 1vh 2vh;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        
+        font-size: 1.5vh;
+        margin: 0vh 2vw 0vh 2vw;
+        border: 1px solid black;
+    }
+    
+    
+    
+    
+    .Add{
+        width: 84vw;
+        margin: auto;
+        height: 35vh;
+        z-index: 4;
+        border-radius: 20px;
+        overflow: hidden;
+        background: red;
+        border: 1px solid black;
+        
+    }
+    
+    .Add a{
+        text-decoration: none;
+        color: white;
+        padding-right: 2vw;
+    }
+    
+    .Add img{
+        width: 100%;
+        box-shadow: 0px 0px 100px #000000be;
+        transition: all .4s;
+    }
+    
+    .Add img:hover{
+        transform: scale(1.2);
+    }
+    
+    .Add div{
+        display: flex;
+        padding: 2vh 5vw;
+        font-size: 2vw;
+        color: white;
+    }
+    
+    .bi bi-arrow-right{
+        padding: 2vh 5vw;
+    }
+    
+    .AddLine{
+        width: 90vw;
+        
+        border: 1px solid white;
+        
+    }
+    
+    .AddTwo{
+        width: 84vw;
+        margin: auto;
+        height: 35vh;
+        z-index: 4;
+        border-radius: 20px;
+        overflow: hidden;
+        background: red;
+        border: 1px solid black;
+    }
+    
+    .AddTwo img{
+        width: 100%;
+        
+        transition: all .4s;
+    }
+    
+    .Add .img{
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        box-shadow: 0px 0px 100px #000000be;
+    }
+    .AddTwo .img{
+        padding: 0;
+        overflow: hidden;
+        box-shadow: 0px 0px 100px #000000be;
+    }
+    
+    .AddTwo img:hover{
+        transform: scale(1.2);
+    }
+    
+    .AddTwo a{
+        text-decoration: none;
+        color: white;
+        padding-right: 2vw;
+    }
+    
+    .AddTwo div{
+        display: flex;
+        padding: 2vh 5vw;
+        font-size: 2vw;
+        color: white;
+    }
+    
+    
+    
+    
+    .MainFour{
+        width: 100vw;
+        height: 100vh;
+        background: black;
+        
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .FourContent{
+        width: 90vw;
+        height: 90vh;
+        z-index: 4;
+    }
+    
+    .FourContent h1{
+        color: white;
+        padding: 5%;
+        z-index: 4;
+        border-bottom: 1px solid red;
+    }
+    
+    .FourContent p{
+        color: white;
+        padding: 5%;
+        font-size: 2.6vw;
+        opacity: .8;
+        z-index: 4;
+        text-align: justify;
+    }
+    
+    
+    .RedBox{
+        width: 0vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        background: red;
+        position: absolute;
+        right: 0;
+        top: 65vh;
+        z-index: 4;
+        animation: Year 2s forwards;
+    }
+    
+    .RedBox .y h1{
+        font-size: 1000%;
+        color: white;
+        margin-top: 15%;
+    }
+    
+    .RedBox .year{
+        font-size: 2vw;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15%;
+    }
+    
+    @keyframes Year {
+        0%{
+            
+        }
+        
+        100%{
+            width: 60vw;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+            box-shadow: inset 0px 0px 100px #000000b1;
+        }
+    }
+    
+    
+    .MainFive{
+        width: 100vw;
+        height: 100vh;
+        z-index: 4;
+       
+       
+        z-index: 4;
+        background-color: black;
+        color: white;
+    }
+    
+    .MainFive h1{
+        padding: 5%;
+        padding-right: 7%;
+        display: inline-block;
+        font-size: 6vw;
+        z-index: 5;
+        border-bottom: 4px solid red;
+    }
+    
+    .FiveContent{
+        width: 100vw;
+        height: 90vh;
+        
+        z-index: 5;
+        background-color: transparent;
+    }
+    
+    .FiveContent .Up,.down{
+        width: 100%;
+        height: 50%;
+       
         display: flex;
         justify-content: space-around;
         align-items: center;
-        flex-direction: column;
-        width: 0%;
+        flex-direction: row;
+    }
+    
+    .FiveBox{
+        width: 45%;
         height: 100%;
-        background:  #a4a4a4;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
-        border: 1px solid white;
-        animation: leftAnimation 5s forwards;
         overflow: hidden;
-    }
-    
-    
-    @keyframes leftAnimation {
-    from{
-        width: 0%;
-    }
-    
-    to{
-        width: 70%;
-    }
-    
-    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
         
+        position: relative;
     }
     
+    .MainBox{
+        width: 100%;
+        height: 80%;
+        background: #616161;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        box-shadow: inset 0px 0px 100px #000000ad;
+        border: 2px solid white;
+        z-index: 4;
+    }
+    
+    /* .MainBox::after{
+        content: '';
+        height: 30vw;
+        width: 30vw;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom-left-radius: 30%;
+        background: red;
+        filter: blur(100px);
+        z-index: 1;
+    } */
     
     
     
-    .left .a{
-        font-size: 20vw;
-        color: red;
+    .FiveBox img{
+        height: 45%;
+        width: 100%;
         
-        
+        box-shadow: inset 0px 0px 100px #000000ad;
     }
     
-    .left .b{
-        font-size: 5vw;
-    }
+     
+     .ImgText{
+         width: 100%;
+         /* border-bottom: 2px solid white;
+         border-left: 2px solid white;
+         border-right: 2px solid white; */
+         height: 55%;
+         
+         
+     }
+     
+     .ImgText h2{
+         font-size: 200%;
+         padding: 6%;
+         border-bottom: 5px solid red;
+     }
+     
+     .ImgText p{
+         padding: 6%;
+         text-align: justify;
+     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -418,7 +2459,6 @@ font-family: 'Roboto Slab', serif;
 
 .footer {
     position: relative;
-    bottom: 0px;
     overflow: hidden;
     z-index: 3;
     border-top: 1px solid white;
