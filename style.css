@@ -13,8 +13,9 @@
         border-radius: 50%;
         position: absolute;
         background: red;
-        z-index: 99;
         transition: all .3s;
+mix-blend-mode: difference;
+        z-index: 99;
     }
 
 ::-webkit-scrollbar{
@@ -1287,6 +1288,7 @@ nav{
 .main{
     width: 100vw;
     height: auto;
+    overflow: hidden;
     
     
 }
@@ -1328,10 +1330,9 @@ nav{
         border-radius: 50%;
         position: absolute;
         background: red;
+        mix-blend-mode: difference;
         z-index: 99;
-
-transition: all .3s;    
-}
+    }
     
     
     
@@ -1654,12 +1655,18 @@ nav{
     }
     
      .secondTwo .two{
-        font-size: 4vw;
+        font-size: 10vw;
         color: #787878cf;
         text-align: center;
         padding: 5vw 2vw;
         z-index: 4;
+        height: 10vh;
+        left: 0;
         position: absolute;
+        overflow: scroll;
+        white-space: nowrap;
+        width: 100vw;
+        
     }
     
     .second .welcome{
@@ -1678,7 +1685,7 @@ nav{
         font-family: 'Oswald', sans-serif;
         letter-spacing: 2px;
          overflow: hidden;
-         border: 1px solid red;
+         
     }
     
     .welcome .one{
@@ -1693,6 +1700,7 @@ nav{
         text-align: center;
         position: relative;
         font-size: 10vw;
+        
     }
     
     @keyframes Wone {
